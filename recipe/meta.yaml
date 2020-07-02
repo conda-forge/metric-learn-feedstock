@@ -1,5 +1,5 @@
 {% set name = "metric-learn" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1f9efc791862cf2fe547121b29b1c89445a53848658f299406126f8df8d2ed7a
+  sha256: 36cbfc691d66d099c817694265d75fbd4ede57a90f2bf05b28dd7f0b4d22a1db
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 

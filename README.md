@@ -121,4 +121,3 @@ Feedstock Maintainers
 * [@terrytangyuan](https://github.com/terrytangyuan/)
 * [@wdevazelhes](https://github.com/wdevazelhes/)
 
-
