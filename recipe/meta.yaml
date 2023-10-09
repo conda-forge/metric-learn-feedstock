@@ -1,5 +1,5 @@
 {% set name = "metric-learn" %}
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36cbfc691d66d099c817694265d75fbd4ede57a90f2bf05b28dd7f0b4d22a1db
+  sha256: 2b35246a1098d74163b16cc7779e0abfcbf9036050f4caa258e4fee55eb299cc
 
 build:
   number: 0
@@ -19,10 +19,10 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - numpy
+    - numpy >=1.11.0
     - python >=3.6
-    - scikit-learn >=0.20.3
-    - scipy
+    - scikit-learn >=0.21.3
+    - scipy >=0.17.0
 
 test:
   imports:
