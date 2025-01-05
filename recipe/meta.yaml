@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2b35246a1098d74163b16cc7779e0abfcbf9036050f4caa258e4fee55eb299cc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy >=1.11.0
-    - python >=3.6
+    - python >={{ python_min }}
     - scikit-learn >=0.21.3
     - scipy >=0.17.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - metric_learn
 
